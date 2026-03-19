@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML — ePortfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .topic-img { width:100%; border-radius:8px; border:1px solid var(--border); margin:1rem 0 0.4rem; display:block; object-fit:cover; max-height:300px; }
+    .img-caption { font-size:0.72rem; color:var(--muted); font-family:'Space Mono',monospace; text-align:center; margin-bottom:0.75rem; }
+    .tag-table { width:100%; border-collapse:collapse; font-size:0.88rem; margin:0.75rem 0; }
+    .tag-table th { background:var(--accent-light); color:var(--accent); font-family:'Space Mono',monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.07em; padding:0.55rem 0.85rem; text-align:left; border-bottom:2px solid #c7d7fe; }
+    .tag-table td { padding:0.55rem 0.85rem; border-bottom:1px solid var(--border); color:#374151; vertical-align:top; }
+    .tag-table tr:last-child td { border-bottom:none; }
+    .tag-table td:first-child { font-family:'Space Mono',monospace; font-size:0.8rem; color:var(--accent); font-weight:700; white-space:nowrap; }
+    .tag-table tr:hover td { background:#f9fbff; }
+
+    /* Plain HTML form demo */
+    /* .html-form-demo { background:#fff; border:1px solid var(--border); border-radius:8px; padding:1.5rem; }
+    .html-form-demo h3 { font-size:1.1rem; color:#1a1a1a; margin-bottom:1rem; font-family:Georgia,serif; }
+    .html-form-demo label { display:block; font-weight:bold; margin-bottom:0.25rem; margin-top:0.75rem; color:#333; font-size:0.9rem; }
+    .html-form-demo input, .html-form-demo select, .html-form-demo textarea {
+      display:block; width:100%; padding:0.4rem 0.5rem; border:1px solid #aaa;
+      border-radius:3px; font-size:0.9rem; margin-bottom:0.25rem; background:#fff; color:#111;
+    }
+    .html-form-demo textarea { height:80px; resize:vertical; }
+    .html-form-demo button { margin-top:0.75rem; padding:0.5rem 1.25rem; background:#2563eb; color:#fff; border:none; border-radius:3px; font-size:0.9rem; cursor:pointer; }
+    .html-form-demo p.note { font-size:0.78rem; color:#666; margin-top:0.4rem; }
+    .html-form-demo fieldset { border:1px solid #ccc; border-radius:4px; padding:0.75rem 1rem; margin-top:0.75rem; }
+    .html-form-demo legend { font-weight:bold; font-size:0.88rem; color:#333; padding:0 0.35rem; }
+    .html-form-demo .radio-row { display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.4rem; }
+    .html-form-demo .radio-row label { font-weight:normal; margin:0; display:flex; align-items:center; gap:0.3rem; } */
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">&lt;Portfolio /&gt;</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fullstack.html">Full Stack</a></li>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <span class="tag">Section 02</span>
+      <h1>HTML</h1>
+    </div>
+
+    <!-- Hero image -->
+    <div class="content-block" style="overflow:hidden;">
+      <center><img src="https://imgs.search.brave.com/sQpQ-SH5gp3X45EMQgRIfhtFAvwOKt0v6mcBEC8Ia7k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuY2RubG9nby5j/b20vbG9nb3MvaC85/MC9odG1sLTUuc3Zn"
+           alt="HTML code on a screen" style="max-height:300px;width: auto;border-radius:10px;margin:0;" />
+           <p><i>Image source: <a href="https://cdnlogo.com/logo/html-5_8516.html">CDN Logo</a></i></p>
+      </center>
+    </div>
+    
+
+
+    <!-- What is HTML -->
+    <div class="content-block">
+      <h2>What is HTML?</h2>
+      <p><strong>HTML</strong> (HyperText Markup Language) is the standard language used to create and structure content on the web. Every webpage you visit is built on an HTML foundation. It was created by Tim Berners-Lee in 1991 and has evolved through several versions — the current standard is <strong>HTML5</strong>.</p>
+      <p>HTML uses <strong>elements</strong> made up of tags to describe the structure and meaning of content. Tags are written inside angle brackets. Most tags come in pairs — an opening tag and a closing tag — with content placed between them:</p>
+      <div class="code-block">&lt;tagname&gt;Content goes here&lt;/tagname&gt;</div>
+      <p>Some elements are <strong>self-closing</strong> and do not wrap content — for example <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;img /&gt;</code>, <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;br /&gt;</code>, and <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;input /&gt;</code>.</p>
+    </div>
+
+    <!-- Basic structure -->
+    <div class="content-block">
+      <h2>Basic HTML Page Structure</h2>
+      <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=900&q=80"
+           alt="HTML document structure" class="topic-img" />
+      <p class="img-caption">Every HTML page follows the same fundamental nesting structure.</p>
+      <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;My Page Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</div>
+      <p>Every HTML file must begin with <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;!DOCTYPE html&gt;</code> — this tells the browser to use the modern HTML5 standard. The <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;html&gt;</code> element is the root of the entire page. Inside it, <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;head&gt;</code> holds metadata (invisible to users) and <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;body&gt;</code> contains all visible content.</p>
+    </div>
+
+    <!-- Common tags table -->
+    <div class="content-block">
+      <h2>Common HTML Tags — Quick Reference</h2>
+      <p>Below is a reference of the most commonly used HTML tags, what they are for, and a brief example of each.</p>
+
+      <h3>Text &amp; Headings</h3>
+      <table class="tag-table">
+        <tr><th>Tag</th><th>Purpose</th><th>Example</th></tr>
+        <tr><td>&lt;h1&gt; – &lt;h6&gt;</td><td>Headings — h1 is the largest, h6 the smallest. Only one h1 per page for good SEO.</td><td>&lt;h1&gt;Page Title&lt;/h1&gt;</td></tr>
+        <tr><td>&lt;p&gt;</td><td>Paragraph of text. The browser adds space above and below automatically.</td><td>&lt;p&gt;Hello world.&lt;/p&gt;</td></tr>
+        <tr><td>&lt;strong&gt;</td><td>Bold text — also signals importance to screen readers and search engines.</td><td>&lt;strong&gt;Important&lt;/strong&gt;</td></tr>
+        <tr><td>&lt;em&gt;</td><td>Italic text — also signals emphasis in meaning.</td><td>&lt;em&gt;Stressed word&lt;/em&gt;</td></tr>
+        <tr><td>&lt;br /&gt;</td><td>Line break — moves the next content to a new line without starting a new paragraph.</td><td>Line one&lt;br /&gt;Line two</td></tr>
+        <tr><td>&lt;hr /&gt;</td><td>Horizontal rule — draws a dividing line across the page.</td><td>&lt;hr /&gt;</td></tr>
+        <tr><td>&lt;span&gt;</td><td>Inline container — used to style or target a small piece of text with CSS or JS.</td><td>&lt;span class="red"&gt;word&lt;/span&gt;</td></tr>
+      </table>
+
+      <h3>Links &amp; Media</h3>
+      <table class="tag-table">
+        <tr><th>Tag</th><th>Purpose</th><th>Example</th></tr>
+        <tr><td>&lt;a&gt;</td><td>Anchor — creates a clickable hyperlink. The href attribute sets the destination URL.</td><td>&lt;a href="page.html"&gt;Click&lt;/a&gt;</td></tr>
+        <tr><td>&lt;img /&gt;</td><td>Embeds an image. The alt attribute is required for accessibility — it describes the image for screen readers.</td><td>&lt;img src="pic.jpg" alt="A cat" /&gt;</td></tr>
+        <tr><td>&lt;video&gt;</td><td>Embeds a video player with optional controls.</td><td>&lt;video src="clip.mp4" controls&gt;&lt;/video&gt;</td></tr>
+        <tr><td>&lt;audio&gt;</td><td>Embeds an audio player.</td><td>&lt;audio src="song.mp3" controls&gt;&lt;/audio&gt;</td></tr>
+      </table>
+
+      <h3>Lists</h3>
+      <table class="tag-table">
+        <tr><th>Tag</th><th>Purpose</th><th>Example</th></tr>
+        <tr><td>&lt;ul&gt;</td><td>Unordered list — displays items with bullet points.</td><td>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</td></tr>
+        <tr><td>&lt;ol&gt;</td><td>Ordered list — displays items numbered in sequence.</td><td>&lt;ol&gt;&lt;li&gt;Step 1&lt;/li&gt;&lt;/ol&gt;</td></tr>
+        <tr><td>&lt;li&gt;</td><td>List item — used inside &lt;ul&gt; or &lt;ol&gt; to define each item.</td><td>&lt;li&gt;My item&lt;/li&gt;</td></tr>
+        <tr><td>&lt;dl&gt;</td><td>Description list — pairs terms with their definitions.</td><td>&lt;dl&gt;&lt;dt&gt;Term&lt;/dt&gt;&lt;dd&gt;Meaning&lt;/dd&gt;&lt;/dl&gt;</td></tr>
+      </table>
+
+      <h3>Structure &amp; Layout</h3>
+      <table class="tag-table">
+        <tr><th>Tag</th><th>Purpose</th><th>Example</th></tr>
+        <tr><td>&lt;div&gt;</td><td>Block-level container — groups elements together for layout or styling. Has no visual meaning on its own.</td><td>&lt;div class="card"&gt;...&lt;/div&gt;</td></tr>
+        <tr><td>&lt;span&gt;</td><td>Inline container — wraps a small amount of text or inline content for styling.</td><td>&lt;span style="color:red"&gt;text&lt;/span&gt;</td></tr>
+        <tr><td>&lt;table&gt;</td><td>Creates a data table. Uses &lt;tr&gt; for rows, &lt;th&gt; for header cells, &lt;td&gt; for data cells.</td><td>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</td></tr>
+      </table>
+
+      <h3>Form Elements</h3>
+      <table class="tag-table">
+        <tr><th>Tag</th><th>Purpose</th><th>Example</th></tr>
+        <tr><td>&lt;form&gt;</td><td>Container for all form elements. The action attribute sets where data is sent; method sets GET or POST.</td><td>&lt;form action="/submit" method="post"&gt;</td></tr>
+        <tr><td>&lt;input /&gt;</td><td>Interactive input field. The type attribute controls what kind: text, email, password, checkbox, radio, submit, etc.</td><td>&lt;input type="email" /&gt;</td></tr>
+        <tr><td>&lt;label&gt;</td><td>Describes an input field. Linking it with a for attribute matching the input's id improves accessibility.</td><td>&lt;label for="email"&gt;Email&lt;/label&gt;</td></tr>
+        <tr><td>&lt;textarea&gt;</td><td>Multi-line text input. The rows and cols attributes set its initial size.</td><td>&lt;textarea rows="4"&gt;&lt;/textarea&gt;</td></tr>
+        <tr><td>&lt;select&gt;</td><td>Dropdown menu. Contains &lt;option&gt; elements for each choice.</td><td>&lt;select&gt;&lt;option&gt;Choice&lt;/option&gt;&lt;/select&gt;</td></tr>
+        <tr><td>&lt;button&gt;</td><td>Clickable button. type="submit" submits the form; type="button" is used with JavaScript.</td><td>&lt;button type="submit"&gt;Send&lt;/button&gt;</td></tr>
+        <tr><td>&lt;fieldset&gt;</td><td>Groups related form controls together visually and semantically.</td><td>&lt;fieldset&gt;&lt;legend&gt;Details&lt;/legend&gt;&lt;/fieldset&gt;</td></tr>
+      </table>
+    </div>
+
+    <!-- Semantic HTML -->
+    <div class="content-block">
+      <h2>Semantic HTML</h2>
+      <p>Semantic HTML means using tags that describe the <em>meaning</em> of content, not just its appearance. Before semantic HTML5 tags existed, developers used generic <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;div&gt;</code> tags for everything. Semantic tags make pages more accessible to screen readers, easier for search engines to index, and more readable for other developers.</p>
+      <table class="tag-table">
+        <tr><th>Tag</th><th>Purpose</th></tr>
+        <tr><td>&lt;header&gt;</td><td>Introductory content for a page or section — typically the site logo, title, and navigation.</td></tr>
+        <tr><td>&lt;nav&gt;</td><td>A block of navigation links — the main menu of the site.</td></tr>
+        <tr><td>&lt;main&gt;</td><td>The dominant content of the page. There should only be one &lt;main&gt; per page.</td></tr>
+        <tr><td>&lt;section&gt;</td><td>A thematically grouped block of content, usually with its own heading.</td></tr>
+        <tr><td>&lt;article&gt;</td><td>Self-contained content that could stand alone — a blog post, news article, or product card.</td></tr>
+        <tr><td>&lt;aside&gt;</td><td>Content related to the main content but not central to it — a sidebar or callout box.</td></tr>
+        <tr><td>&lt;footer&gt;</td><td>Footer of the page or section — copyright info, contact links, etc.</td></tr>
+      </table>
+    </div>
+
+    <!-- HTML-only form demo -->
+    <div class="content-block">
+      <h2>HTML Form Demo</h2>
+      <p>The form below is built using <strong>HTML tags only</strong> — no CSS styling, no JavaScript. It demonstrates how HTML alone can create a fully structured, accessible, and functional form using elements like <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;form&gt;</code>, <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;fieldset&gt;</code>, <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;input&gt;</code>, <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;select&gt;</code>, and <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;textarea&gt;</code>.</p>
+
+      <div class="demo-box">
+        <label>// HTML-Only Form — No CSS Applied</label>
+        <div class="html-form-demo">
+          <h4>Student Registration Form</h4>
+          <form action="#" method="post">
+
+            <fieldset>
+              <legend>Personal Details</legend>
+
+              <label for="h-fname">First Name:</label> <br>
+              <input type="text" id="h-fname" name="firstname" placeholder="Enter your first name" required /> <br>
+
+              <label for="h-lname">Last Name:</label> <br>
+              <input type="text" id="h-lname" name="lastname" placeholder="Enter your last name" required /> <br>
+
+              <label for="h-email">Email Address:</label>
+              <input type="email" id="h-email" name="email" placeholder="example@email.com" required /> <br>
+
+              <label for="h-dob">Date of Birth:</label>
+              <input type="date" id="h-dob" name="dob" /> 
+            </fieldset>
+
+            <fieldset>
+              <legend>Course Details</legend>
+
+              <label for="h-course">Select Your Course:</label>
+              <select id="h-course" name="course">
+                <option value="">-- Choose a course --</option> 
+                <option value="cet138">CET138 Full Stack Development</option>
+                <option value="cet101">CET101 Web Design</option>
+                <option value="cet202">CET202 Database Systems</option>
+              </select> <br>
+
+
+              <label>Study Mode:</label>
+              <div class="radio-row">
+                <label><input type="radio" name="mode" value="full" /> Full Time</label>
+                <label><input type="radio" name="mode" value="part" /> Part Time</label>
+                <label><input type="radio" name="mode" value="online" /> Online</label>
+              </div>
+
+              <label for="h-msg" style="margin-top:0.75rem;">Why do you want to study this course?</label> <br>
+              <textarea id="h-msg" name="message" rows="3" placeholder="Write a short reason..."></textarea> <br>
+
+              <label><input type="checkbox" name="agree" required /> I agree to the terms and conditions</label>
+            </fieldset>
+
+            <button type="submit">Submit Registration</button>
+            <p class="note">This form uses only HTML — &lt;form&gt;, &lt;fieldset&gt;, &lt;legend&gt;, &lt;label&gt;, &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;, &lt;button&gt;.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>Screenshot Evidence</h2>
+      <div class="screenshot-area">
+        <img src="./htmlform.png" alt="html form image">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>CET138 Full Stack Development &mdash; Prabin Upadhayay &mdash; Reg: 240832809</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript — ePortfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .topic-img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin: 1rem 0 0.4rem;
+      display: block;
+      object-fit: cover;
+      max-height: 300px;
+    }
+
+    .img-caption {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .demo-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .demo-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .counter-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 2.5rem;
+      color: var(--accent);
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    #colour-box {
+      width: 100%;
+      height: 72px;
+      border-radius: 6px;
+      background: #bfdbfe;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: #1e3a8a;
+      font-weight: 700;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">&lt;Portfolio /&gt;</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fullstack.html">Full Stack</a></li>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <span class="tag">Section 05</span>
+      <h1>JavaScript</h1>
+    </div>
+
+    <div class="content-block">
+      <center><img
+          src="https://imgs.search.brave.com/j9af77_OCo1vhi3ruXJQBm4ZdSWfCT9Foa8S8FsaYhA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy13b3JsZC5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjMv/MDIvSmF2YVNjcmlw/dC1TeW1ib2wtNTAw/eDI4MS5wbmc"
+          alt="JavaScript logo" style="max-height:400px;width: auto;border-radius:10px;margin:0;" />
+        <p><i>Image source: <a href="https://logos-world.net/javascript-logo/">Logos World</a></i></p>
+      </center>
+    </div>
+
+    <!-- What is JS -->
+    <div class="content-block">
+      <h2>What is JavaScript?</h2>
+      <p><strong>JavaScript</strong> is a lightweight, interpreted programming language that runs directly in the web
+        browser. It is the only programming language natively supported by all browsers, making it the essential tool
+        for adding behaviour and interactivity to web pages.</p>
+      <p>While HTML defines <em>what</em> is on the page and CSS defines <em>how it looks</em>, JavaScript defines
+        <em>what it does</em>. It can respond to user events (clicks, typing, scrolling), modify the page content
+        dynamically, validate form data before submission, fetch data from servers without reloading the page (AJAX),
+        and much more.</p>
+      <p>JavaScript was originally designed for the browser but now also runs on servers (Node.js), in mobile apps
+        (React Native), and in desktop applications (Electron). It is one of the most widely used programming languages
+        in the world.</p>
+    </div>
+
+    <!-- Variables -->
+    <div class="content-block">
+      <h2>Variables &amp; Data Types</h2>
+      <p>Variables are named containers that store data values. JavaScript has three ways to declare a variable, each
+        with different scoping and mutability rules:</p>
+      <ul style="font-size:0.92rem;color:#374151;padding-left:1.4rem;margin-bottom:1rem;">
+        <li style="margin-bottom:0.4rem;"><strong>var</strong> — the original declaration keyword. Function-scoped and
+          can be re-declared. Mostly replaced by <code
+            style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">let</code> and <code
+            style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">const</code> in modern
+          JavaScript due to confusing hoisting behaviour.</li>
+        <li style="margin-bottom:0.4rem;"><strong>let</strong> — block-scoped and can be reassigned. The standard choice
+          for values that need to change.</li>
+        <li style="margin-bottom:0.4rem;"><strong>const</strong> — block-scoped and cannot be reassigned after
+          declaration. Use for values that should not change (including most function references and DOM elements).</li>
+      </ul>
+      <div class="code-block">// Primitive data types
+        let name = "Prabin"; // String — text in quotes
+        let age = 21; // Number — integers and decimals
+        let isEnrolled = true; // Boolean — true or false
+        let score = null; // Null — intentionally empty
+        let result; // Undefined — declared but not assigned
+
+        // Reference types
+        const colours = ["red", "green", "blue"]; // Array — ordered list
+        const student = { // Object — key-value pairs
+        name: "Prabin",
+        age: 21,
+        course: "CET138"
+        };
+
+        // Template literals — embed variables in strings
+        console.log(`Hello, my name is ${name} and I am ${age} years old.`);</div>
+      <p>JavaScript uses <strong>dynamic typing</strong> — you do not declare a variable's type; JavaScript infers it
+        from the value. You can check a value's type with <code
+          style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">typeof variable</code>.</p>
+    </div>
+
+    <!-- Functions -->
+    <div class="content-block">
+      <h2>Functions</h2>
+      <p>A function is a reusable, named block of code that performs a specific task. Functions are fundamental to
+        JavaScript — they reduce repetition, make code easier to test, and allow you to break complex logic into
+        smaller, manageable pieces.</p>
+      <div class="code-block">// Function declaration — hoisted, available before its definition
+        function greet(name) {
+        return "Hello, " + name + "!";
+        }
+
+        // Function expression — assigned to a variable
+        const add = function(a, b) {
+        return a + b;
+        };
+
+        // Arrow function (ES6) — concise syntax, no own 'this'
+        const multiply = (a, b) => a * b;
+
+        // Default parameters — used when no argument is passed
+        function welcome(name = "Student") {
+        return `Welcome, ${name}!`;
+        }
+
+        // Rest parameters — accept any number of arguments
+        function sum(...numbers) {
+        return numbers.reduce((total, n) => total + n, 0);
+        }
+
+        console.log(greet("Prabin")); // Hello, Prabin!
+        console.log(add(3, 4)); // 7
+        console.log(multiply(5, 6)); // 30
+        console.log(welcome()); // Welcome, Student!
+        console.log(sum(1, 2, 3, 4)); // 10</div>
+    </div>
+
+    <!-- DOM -->
+    <div class="content-block">
+      <h2>The DOM &amp; DOM Manipulation</h2>
+      <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=900&q=80"
+        alt="JavaScript DOM and web development" class="topic-img" />
+      <p class="img-caption">JavaScript accesses and modifies the DOM — a live tree of every element on the page.</p>
+      <p>The <strong>DOM</strong> (Document Object Model) is a programming interface that represents an HTML document as
+        a tree of objects. Every HTML element becomes a node in this tree, and JavaScript can read and modify these
+        nodes to dynamically update what the user sees — without reloading the page.</p>
+      <div class="code-block">// Selecting elements
+        const heading = document.getElementById("title");
+        const buttons = document.querySelectorAll(".btn"); // Returns NodeList
+        const firstCard = document.querySelector(".card"); // First match
+
+        // Reading and changing content
+        heading.textContent = "Updated Title"; // Change text (safe)
+        heading.innerHTML = "&lt;em&gt;Italic&lt;/em&gt; Title"; // Parses HTML (use carefully)
+
+        // Changing styles
+        heading.style.color = "blue";
+        heading.style.fontSize = "2rem";
+
+        // Adding and removing CSS classes
+        firstCard.classList.add("active");
+        firstCard.classList.remove("hidden");
+        firstCard.classList.toggle("expanded"); // Add if absent, remove if present
+
+        // Reading and setting attributes
+        const link = document.querySelector("a");
+        link.setAttribute("href", "https://example.com");
+        console.log(link.getAttribute("href"));
+
+        // Creating and inserting new elements
+        const newPara = document.createElement("p");
+        newPara.textContent = "I was created by JavaScript!";
+        document.body.appendChild(newPara);</div>
+    </div>
+
+    <!-- Events -->
+    <div class="content-block">
+      <h2>Events &amp; Event Listeners</h2>
+      <p>Events are actions that happen in the browser — a user clicking a button, typing in a field, scrolling the
+        page, or the document finishing loading. JavaScript uses <strong>event listeners</strong> to detect these events
+        and run a function (called an <em>event handler</em>) in response.</p>
+      <div class="code-block">const btn = document.getElementById("submit-btn");
+
+        // addEventListener(event, handler) is the modern, preferred approach
+        btn.addEventListener("click", function(event) {
+        event.preventDefault(); // Stop the default action (e.g. form submit)
+        console.log("Button clicked!");
+        });
+
+        // The event object carries information about what happened
+        document.addEventListener("keydown", function(event) {
+        console.log("Key pressed:", event.key);
+        if (event.key === "Enter") { /* do something */ }
+        });
+
+        // Common events:
+        // click, dblclick — mouse clicks
+        // keydown, keyup, keypress — keyboard
+        // submit — form submission
+        // input, change — form field changes
+        // mouseover, mouseout — hover
+        // load, DOMContentLoaded — page/resource loading
+        // scroll, resize — viewport changes</div>
+      <p>Always use <code
+          style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">addEventListener</code>
+        rather than inline HTML event attributes like <code
+          style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">onclick="..."</code> — it
+        keeps your JavaScript separate from your HTML and allows multiple listeners on the same element.</p>
+    </div>
+
+    <!-- Conditionals and loops -->
+    <div class="content-block">
+      <h2>Conditionals &amp; Loops</h2>
+      <p>Conditionals allow your code to make decisions and execute different paths based on conditions. Loops allow you
+        to repeat code efficiently without writing it multiple times.</p>
+
+      <h3>If / Else If / Else</h3>
+      <div class="code-block">let score = 72;
+
+        if (score >= 70) {
+        console.log("Pass — well done!");
+        } else if (score >= 50) {
+        console.log("Borderline — keep working.");
+        } else {
+        console.log("Fail — please re-sit.");
+        }
+
+        // Ternary operator — shorthand for simple if/else
+        const grade = score >= 70 ? "Pass" : "Fail";</div>
+
+      <h3>Loops</h3>
+      <div class="code-block">// for loop — when you know the number of iterations
+        for (let i = 0; i < 5; i++) { console.log("Iteration", i); } // while loop — when you loop until a condition
+          changes let count=0; while (count < 3) { console.log("Count:", count); count++; } // for...of — loop over an
+          array's values const fruits=["apple", "banana" , "cherry" ]; for (const fruit of fruits) { console.log(fruit);
+          } // forEach — array method with a callback fruits.forEach(function(fruit, index) { console.log(index, fruit);
+          });</div>
+      </div>
+
+      <!-- Arrays and Objects -->
+      <div class="content-block">
+        <h2>Arrays &amp; Objects</h2>
+        <p>Arrays and objects are the two main ways to group and structure data in JavaScript. Mastering them is
+          essential for working with any real application.</p>
+        <div class="code-block">// Arrays — ordered, indexed collections
+          const modules = ["HTML", "CSS", "Bootstrap", "JavaScript"];
+
+          modules.push("Node.js"); // Add to end
+          modules.pop(); // Remove from end
+          modules.unshift("Intro"); // Add to start
+          const first = modules[0]; // Access by index
+
+          // Useful array methods
+          const upper = modules.map(m => m.toUpperCase()); // Transform each item
+          const web = modules.filter(m => m !== "Intro"); // Keep matching items
+          const found = modules.find(m => m === "CSS"); // Find one item
+
+          // Objects — key-value stores
+          const student = {
+          name: "Prabin",
+          age: 21,
+          course: "CET138",
+          greet() { // Method — function inside an object
+          return `Hi, I am ${this.name}`;
+          }
+          };
+
+          console.log(student.name); // Dot notation
+          console.log(student["age"]); // Bracket notation
+          student.grade = "A"; // Add a new property
+
+          // Destructuring — extract values into variables
+          const { name, course } = student;
+          const [first2, second] = modules;</div>
+      </div>
+
+      <!-- Live Demo 1: Counter -->
+      <div class="content-block">
+        <h2>Live Demo 1 — Click Counter</h2>
+        <p>Demonstrates a variable being updated and the DOM being modified on each button click. A counter variable is
+          declared outside the event listener so it persists between clicks.</p>
+        <div class="demo-box">
+          <label>// Counter Demo</label>
+          <span class="counter-num" id="counter-display">0</span>
+          <button class="demo-btn" id="counter-btn">Click to Count</button>
+        </div>
+        <div class="code-block">let count = 0;
+          const display = document.getElementById("counter-display");
+          const btn = document.getElementById("counter-btn");
+
+          btn.addEventListener("click", function() {
+          count++; // Increment the variable
+          display.textContent = count; // Update the DOM
+          });</div>
+      </div>
+
+      <!-- Live Demo 2: Colour Box -->
+      <div class="content-block">
+        <h2>Live Demo 2 — Colour Changer</h2>
+        <p>Demonstrates arrays, the modulo operator for cycling, and direct style manipulation via the DOM. The modulo
+          operator (<code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">%</code>)
+          wraps the index back to 0 when it reaches the end of the array.</p>
+        <div class="demo-box">
+          <label>// Colour Changer Demo</label>
+          <div id="colour-box">Click me to change colour</div>
+        </div>
+        <div class="code-block">const colours = ["#bfdbfe", "#bbf7d0", "#fde68a", "#fecdd3", "#e9d5ff"];
+          const textColours = ["#1e3a8a", "#14532d", "#78350f", "#9f1239", "#581c87"];
+          let index = 0;
+
+          box.addEventListener("click", function() {
+          index = (index + 1) % colours.length; // Cycle through array
+          box.style.background = colours[index];
+          box.style.color = textColours[index];
+          });</div>
+      </div>
+
+      <!-- Live Demo 3: JS form validation -->
+      <div class="content-block">
+        <h2>Live Demo 3 — JavaScript Form Validation</h2>
+        <p>This is the <strong>same registration form</strong> now enhanced with <strong>JavaScript</strong>. JavaScript
+          intercepts the form's submit event, validates each field on the client side before any data is sent, shows
+          individual error messages next to fields with problems, and displays a success message when everything passes.
+          This demonstrates DOM selection, event handling, conditional logic, and dynamic class/content manipulation
+          working together.</p>
+
+        <div class="demo-box">
+          <label>// Same Form — Now with JavaScript Validation</label>
+          <div id="js-form-wrap">
+            <style>
+              #js-form-wrap {
+                font-family: 'Inter', sans-serif;
+              }
+
+              #js-form-wrap .js-card {
+                background: #f0f4ff;
+                border: 1px solid #c7d7fe;
+                border-radius: 12px;
+                padding: 2rem 2.25rem;
+                max-width: 520px;
+                margin: 0 auto;
+              }
+
+              #js-form-wrap h3 {
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: #1e3a8a;
+                margin-bottom: 0.3rem;
+              }
+
+              #js-form-wrap .subtitle {
+                font-size: 0.8rem;
+                color: #6b7280;
+                margin-bottom: 1.25rem;
+              }
+
+              #js-form-wrap fieldset {
+                border: 1px solid #bfdbfe;
+                border-radius: 8px;
+                padding: 1rem 1.25rem;
+                margin-bottom: 1rem;
+                background: #fff;
+              }
+
+              #js-form-wrap legend {
+                font-size: 0.75rem;
+                font-weight: 700;
+                color: #2563eb;
+                text-transform: uppercase;
+                letter-spacing: 0.07em;
+                padding: 0 0.5rem;
+              }
+
+              #js-form-wrap label {
+                display: block;
+                font-size: 0.82rem;
+                font-weight: 600;
+                color: #374151;
+                margin-bottom: 0.25rem;
+                margin-top: 0.7rem;
+              }
+
+              #js-form-wrap label:first-of-type {
+                margin-top: 0;
+              }
+
+              #js-form-wrap input[type="text"],
+              #js-form-wrap input[type="email"],
+              #js-form-wrap input[type="date"],
+              #js-form-wrap select,
+              #js-form-wrap textarea {
+                width: 100%;
+                padding: 0.5rem 0.75rem;
+                border: 1px solid #d1d5db;
+                border-radius: 6px;
+                font-size: 0.88rem;
+                font-family: 'Inter', sans-serif;
+                color: #111;
+                background: #fff;
+                outline: none;
+                box-sizing: border-box;
+                transition: border-color 0.2s;
+              }
+
+              #js-form-wrap input:focus,
+              #js-form-wrap select:focus,
+              #js-form-wrap textarea:focus {
+                border-color: #2563eb;
+              }
+
+              #js-form-wrap textarea {
+                resize: vertical;
+                height: 72px;
+              }
+
+              #js-form-wrap .radio-row {
+                display: flex;
+                gap: 1.1rem;
+                flex-wrap: wrap;
+                margin-top: 0.4rem;
+              }
+
+              #js-form-wrap .radio-row label {
+                font-weight: 400;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                gap: 0.3rem;
+              }
+
+              #js-form-wrap .checkbox-row {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 0.6rem;
+              }
+
+              #js-form-wrap .checkbox-row label {
+                margin: 0;
+                font-weight: 400;
+                font-size: 0.82rem;
+              }
+
+              #js-form-wrap button {
+                width: 100%;
+                padding: 0.65rem;
+                background: #2563eb;
+                color: #fff;
+                border: none;
+                border-radius: 7px;
+                font-size: 0.92rem;
+                font-weight: 700;
+                font-family: 'Inter', sans-serif;
+                cursor: pointer;
+                margin-top: 0.6rem;
+                transition: background 0.2s;
+              }
+
+              #js-form-wrap button:hover {
+                background: #1d4ed8;
+              }
+
+              .field-error {
+                border-color: #ef4444 !important;
+              }
+
+              .error-msg {
+                color: #dc2626;
+                font-size: 0.75rem;
+                margin-top: 0.2rem;
+                display: block;
+                font-weight: 500;
+              }
+
+              .success-banner {
+                background: #f0fdf4;
+                border: 1px solid #86efac;
+                border-radius: 8px;
+                padding: 1rem 1.25rem;
+                text-align: center;
+                color: #166534;
+                font-weight: 600;
+                font-size: 0.92rem;
+                margin-bottom: 1rem;
+                display: none;
+              }
+            </style>
+
+            <div class="js-card">
+              <h3>Student Registration Form</h3>
+              <p class="subtitle">Fields are validated by JavaScript before submission.</p>
+
+              <div class="success-banner" id="js-success">
+                ✅ Registration submitted successfully! JavaScript validated all fields.
+              </div>
+
+              <form id="js-reg-form" novalidate>
+                <fieldset>
+                  <legend>Personal Details</legend>
+                  <label for="j-fname">First Name</label>
+                  <input type="text" id="j-fname" placeholder="Enter your first name" />
+                  <span class="error-msg" id="err-fname"></span>
+
+                  <label for="j-lname">Last Name</label>
+                  <input type="text" id="j-lname" placeholder="Enter your last name" />
+                  <span class="error-msg" id="err-lname"></span>
+
+                  <label for="j-email">Email Address</label>
+                  <input type="email" id="j-email" placeholder="example@email.com" />
+                  <span class="error-msg" id="err-email"></span>
+
+                  <label for="j-dob">Date of Birth</label>
+                  <input type="date" id="j-dob" />
+                  <span class="error-msg" id="err-dob"></span>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Course Details</legend>
+                  <label for="j-course">Select Your Course</label>
+                  <select id="j-course">
+                    <option value="">-- Choose a course --</option>
+                    <option value="cet138">CET138 Full Stack Development</option>
+                    <option value="cet101">CET101 Web Design</option>
+                    <option value="cet202">CET202 Database Systems</option>
+                  </select>
+                  <span class="error-msg" id="err-course"></span>
+
+                  <label>Study Mode</label>
+                  <div class="radio-row">
+                    <label><input type="radio" name="jmode" value="full" /> Full Time</label>
+                    <label><input type="radio" name="jmode" value="part" /> Part Time</label>
+                    <label><input type="radio" name="jmode" value="online" /> Online</label>
+                  </div>
+                  <span class="error-msg" id="err-mode"></span>
+
+                  <label for="j-msg">Why do you want to study this course?</label>
+                  <textarea id="j-msg" placeholder="Write a short reason (min 10 characters)..."></textarea>
+                  <span class="error-msg" id="err-msg"></span>
+
+                  <div class="checkbox-row">
+                    <input type="checkbox" id="j-agree" />
+                    <label for="j-agree">I agree to the terms and conditions</label>
+                  </div>
+                  <span class="error-msg" id="err-agree"></span>
+                </fieldset>
+
+                <button type="submit">Submit Registration</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="content-block">
+          <h2>Screenshot Evidence</h2>
+          <div class="screenshot-area">
+            <img src="./javascriptform.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <p>CET138 Full Stack Development &mdash; Prabin Upadhayay &mdash; Reg: 240832809</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      // Counter demo
+      (function () {
+        const display = document.getElementById("counter-display");
+        const btn = document.getElementById("counter-btn");
+        if (!display || !btn) return;
+        let count = 0;
+        btn.addEventListener("click", function () { count++; display.textContent = count; });
+      })();
+
+      // Colour box demo
+      (function () {
+        const box = document.getElementById("colour-box");
+        if (!box) return;
+        const colours = ["#bfdbfe", "#bbf7d0", "#fde68a", "#fecdd3", "#e9d5ff"];
+        const textColours = ["#1e3a8a", "#14532d", "#78350f", "#9f1239", "#581c87"];
+        let index = 0;
+        box.addEventListener("click", function () {
+          index = (index + 1) % colours.length;
+          box.style.background = colours[index];
+          box.style.color = textColours[index];
+        });
+      })();
+
+      // JS form validation
+      const jsForm = document.getElementById("js-reg-form");
+      if (jsForm) {
+        jsForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          let valid = true;
+
+          function setError(fieldId, errorId, message) {
+            const field = document.getElementById(fieldId);
+            const errEl = document.getElementById(errorId);
+            if (!field || !errEl) return;
+            if (message) {
+              field.classList.add("field-error");
+              errEl.textContent = message;
+              valid = false;
+            } else {
+              field.classList.remove("field-error");
+              errEl.textContent = "";
+            }
+          }
+
+          const fname = document.getElementById("j-fname").value.trim();
+          setError("j-fname", "err-fname", fname ? "" : "First name is required.");
+
+          const lname = document.getElementById("j-lname").value.trim();
+          setError("j-lname", "err-lname", lname ? "" : "Last name is required.");
+
+          const email = document.getElementById("j-email").value.trim();
+          const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          setError("j-email", "err-email", emailOk ? "" : "Please enter a valid email address.");
+
+          const dob = document.getElementById("j-dob").value;
+          setError("j-dob", "err-dob", dob ? "" : "Date of birth is required.");
+
+          const course = document.getElementById("j-course").value;
+          setError("j-course", "err-course", course ? "" : "Please select a course.");
+
+          const modeSelected = document.querySelector('input[name="jmode"]:checked');
+          const modeErr = document.getElementById("err-mode");
+          if (!modeSelected) { if (modeErr) modeErr.textContent = "Please select a study mode."; valid = false; }
+          else { if (modeErr) modeErr.textContent = ""; }
+
+          const msg = document.getElementById("j-msg").value.trim();
+          setError("j-msg", "err-msg", msg.length >= 10 ? "" : "Please write at least 10 characters.");
+
+          const agree = document.getElementById("j-agree").checked;
+          const agreeErr = document.getElementById("err-agree");
+          if (!agree) { if (agreeErr) agreeErr.textContent = "You must agree to the terms."; valid = false; }
+          else { if (agreeErr) agreeErr.textContent = ""; }
+
+          if (valid) {
+            const banner = document.getElementById("js-success");
+            if (banner) { banner.style.display = "block"; }
+            jsForm.reset();
+            setTimeout(function () { if (banner) banner.style.display = "none"; }, 5000);
+          }
+        });
+      }
+    </script>
+</body>
+
+</html>

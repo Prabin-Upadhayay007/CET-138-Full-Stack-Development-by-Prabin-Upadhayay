@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS — ePortfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .topic-img { width:100%; border-radius:8px; border:1px solid var(--border); margin:1rem 0 0.4rem; display:block; object-fit:cover; max-height:300px; }
+    .img-caption { font-size:0.72rem; color:var(--muted); font-family:'Space Mono',monospace; text-align:center; margin-bottom:0.75rem; }
+
+    /* Styled form demo */
+    .css-form-wrap {
+      background: #f0f4ff;
+      border: 1px solid #c7d7fe;
+      border-radius: 12px;
+      padding: 2rem 2.25rem;
+      max-width: 520px;
+      margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+    }
+    .css-form-wrap h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 0.4rem;
+    }
+    .css-form-wrap p.subtitle {
+      font-size: 0.82rem;
+      color: #4b5563;
+      margin-bottom: 1.25rem;
+    }
+    .css-form-wrap fieldset {
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.1rem;
+      background: #fff;
+    }
+    .css-form-wrap legend {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #2563eb;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0 0.5rem;
+    }
+    .css-form-wrap label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.3rem;
+      margin-top: 0.75rem;
+    }
+    .css-form-wrap label:first-of-type { margin-top: 0; }
+    .css-form-wrap input[type="text"],
+    .css-form-wrap input[type="email"],
+    .css-form-wrap input[type="date"],
+    .css-form-wrap select,
+    .css-form-wrap textarea {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .css-form-wrap input:focus,
+    .css-form-wrap select:focus,
+    .css-form-wrap textarea:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+    }
+    .css-form-wrap textarea { resize: vertical; height: 80px; }
+    .css-form-wrap .radio-row {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 0.4rem;
+    }
+    .css-form-wrap .radio-row label {
+      font-weight: 400;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+    }
+    .css-form-wrap .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .css-form-wrap .checkbox-row label {
+      margin: 0;
+      font-weight: 400;
+      font-size: 0.82rem;
+    }
+    .css-form-wrap button {
+      width: 100%;
+      padding: 0.65rem;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: 0.5rem;
+    }
+    .css-form-wrap button:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .css-form-wrap .form-note {
+      font-size: 0.73rem;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 0.6rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">&lt;Portfolio /&gt;</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fullstack.html">Full Stack</a></li>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <span class="tag">Section 03</span>
+      <h1>CSS</h1>
+    </div>
+
+        <div class="content-block" style="overflow:hidden;">
+      <center><img src="https://imgs.search.brave.com/XQPUGv6_Pws6Q6sXSakBpp8NljFPl-koRnj0cHErrL8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly8xMDAw/bWFyY2FzLm5ldC93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/Mi9DU1MtTG9nby01/MDB4MjgzLmpwZw"
+           alt="css image on screen" style="max-height:600px;width: auto;border-radius:10px;margin:0;" />
+           <p><i>Image source: <a href="https://1000marcas.net/css-logo/">1000marcas</a></i></p>
+      </center>
+    </div>
+
+
+    <!-- What is CSS -->
+    <div class="content-block">
+      <h2>What is CSS?</h2>
+      <p><strong>CSS</strong> (Cascading Style Sheets) is the language used to control the visual presentation of HTML documents. While HTML defines the structure and content of a page, CSS tells the browser how that content should look — its colours, fonts, spacing, sizes, layout, and animations.</p>
+      <p>CSS is called "cascading" because styles can come from multiple sources (browser defaults, external stylesheets, inline styles) and are applied in a specific priority order — the cascade. Understanding this cascade is essential to writing predictable CSS.</p>
+      <p>CSS is linked to an HTML file using a <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;link&gt;</code> tag in the head, written inside a <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">&lt;style&gt;</code> tag, or applied directly as an inline style attribute. Using an external stylesheet is best practice as it separates concerns and allows one CSS file to style an entire website.</p>
+      <div class="code-block">/* External stylesheet linked in HTML head */
+&lt;link rel="stylesheet" href="style.css" /&gt;
+
+/* Basic CSS rule syntax */
+selector {
+  property: value;
+  another-property: value;
+}</div>
+    </div>
+
+    <!-- Selectors -->
+    <div class="content-block">
+      <h2>CSS Selectors</h2>
+      <p>A selector is the part of a CSS rule that identifies which HTML elements the styles should apply to. Choosing the right selector is crucial — overly broad selectors can accidentally break unrelated elements, while overly specific selectors can be hard to override.</p>
+
+      <h3>Element Selector</h3>
+      <p>Targets every instance of a given HTML tag on the page. Useful for setting global defaults but can be too broad for specific components.</p>
+      <div class="code-block">p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}</div>
+
+      <h3>Class Selector</h3>
+      <p>Targets all elements with a specific class attribute. Classes are the most commonly used selector because they are reusable across multiple elements and specific enough to avoid side effects. A class is added to HTML with <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">class="name"</code> and selected in CSS with a dot prefix.</p>
+      <div class="code-block">.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}</div>
+
+      <h3>ID Selector</h3>
+      <p>Targets a single element with a unique id attribute. IDs have very high specificity — they override class and element styles — so they should be used sparingly. Best practice is to use IDs for JavaScript hooks, and classes for styling.</p>
+      <div class="code-block">#main-header {
+  background: #1e3a8a;
+  color: white;
+  padding: 1rem 2rem;
+}</div>
+
+      <h3>Descendant &amp; Child Selectors</h3>
+      <p>Descendant selectors (space) target elements nested anywhere inside another. Child selectors (&gt;) only target direct children. These help you style elements contextually without adding extra classes.</p>
+      <div class="code-block">/* Any &lt;p&gt; anywhere inside .card */
+.card p { color: #555; }
+
+/* Only direct &lt;li&gt; children of &lt;ul&gt; */
+ul > li { list-style: square; }</div>
+
+      <h3>Pseudo-classes</h3>
+      <p>Pseudo-classes target elements in a specific state — such as when the user is hovering over them, when an input is focused, or when a link has been visited. They are written with a colon after the selector.</p>
+      <div class="code-block">/* Style a button when hovered */
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Style an input when it has focus */
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* First item in a list */
+li:first-child { font-weight: bold; }</div>
+
+    </div>
+
+    <!-- Box model -->
+    <div class="content-block">
+      <h2>The CSS Box Model</h2>
+      <p>The box model is one of the most fundamental concepts in CSS. Every HTML element is rendered as a rectangular box. That box has four distinct layers, each adding space around the content:</p>
+      <ul style="font-size:0.93rem;color:#374151;padding-left:1.4rem;margin-bottom:1rem;">
+        <li style="margin-bottom:0.4rem;"><strong>Content</strong> — the actual text, image, or other content inside the element. Its size is controlled by width and height.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Padding</strong> — transparent space between the content and the border. Padding is inside the element, so it takes on the background colour.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Border</strong> — a line that wraps around the padding and content. You can control its width, style (solid, dashed, dotted), and colour.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Margin</strong> — transparent space outside the border. Margin creates distance between this element and its neighbours. Margins from adjacent elements can <em>collapse</em> into one.</li>
+      </ul>
+      <div class="code-block">/* Setting all four layers */
+.box {
+  width: 250px;
+  padding: 20px;
+  border: 2px solid #2563eb;
+  margin: 30px auto; /* auto centres horizontally */
+}
+
+/* box-sizing: border-box makes width include padding and border */
+/* This is best practice and usually applied globally */
+*, *::before, *::after {
+  box-sizing: border-box;
+}</div>
+
+      <!-- Visual box model diagram -->
+      <div style="background:var(--bg);border-radius:8px;padding:1.25rem;text-align:center;border:1px solid var(--border);margin-top:1rem;">
+        <div style="background:#fef3c7;border:2px dashed #f59e0b;border-radius:4px;padding:10px;font-size:0.72rem;color:#92400e;font-family:'Space Mono',monospace;font-weight:700;">
+          MARGIN — pushes other elements away
+          <div style="background:#dbeafe;border:2px solid #3b82f6;margin-top:8px;padding:8px;border-radius:3px;color:#1e40af;">
+            BORDER — visible outline
+            <div style="background:#dcfce7;border:1px dashed #16a34a;margin-top:8px;padding:8px;color:#15803d;">
+              PADDING — space inside the border
+              <div style="background:#2563eb;color:#fff;padding:10px;font-weight:700;margin-top:8px;border-radius:3px;">
+                CONTENT — your text or image
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:0.82rem;color:var(--muted);text-align:center;margin-top:0.5rem;font-family:'Space Mono',monospace;">Visual representation of the CSS Box Model</p>
+    </div>
+
+    <!-- Typography -->
+    <div class="content-block">
+      <h2>Typography in CSS</h2>
+      <p>Typography is one of the most impactful aspects of web design. CSS provides fine-grained control over how text is displayed — from font choice and size to weight, spacing, and alignment.</p>
+      <div class="code-block">body {
+  font-family: 'Inter', Arial, sans-serif; /* Fallback stack */
+  font-size: 16px;           /* Base size */
+  line-height: 1.6;          /* Space between lines */
+  color: #1a1a1a;            /* Text colour */
+}
+
+h1 {
+  font-size: 2.5rem;         /* Relative to root font size */
+  font-weight: 700;          /* Bold */
+  letter-spacing: -0.02em;   /* Tight tracking for headings */
+}
+
+.small-print {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}</div>
+      <p>Using <strong>rem units</strong> (relative to the root font size) rather than fixed pixels makes typography scale correctly when users change their browser's font size setting — improving accessibility.</p>
+    </div>
+
+    <!-- Colours -->
+    <div class="content-block">
+      <h2>Colours &amp; Backgrounds</h2>
+      <p>CSS supports multiple ways to define colours — each with different use cases:</p>
+      <div class="code-block">/* Named colours */
+color: red;
+background-color: lightblue;
+
+/* Hex codes — precise, widely used */
+color: #2563eb;
+background-color: #f9f9f7;
+
+/* RGB — useful when you need transparency */
+color: rgb(37, 99, 235);
+background-color: rgba(37, 99, 235, 0.1); /* 10% opacity */
+
+/* HSL — intuitive for adjusting lightness/saturation */
+color: hsl(220, 90%, 56%);
+
+/* CSS Variables — define once, use everywhere */
+:root {
+  --primary: #2563eb;
+  --bg: #f9f9f7;
+}
+.btn { background: var(--primary); }
+
+/* Gradients */
+background: linear-gradient(135deg, #2563eb, #7c3aed);
+background: radial-gradient(circle, #eff4ff, #dbeafe);</div>
+    </div>
+
+    <!-- Flexbox -->
+    <div class="content-block">
+      <h2>Flexbox Layout</h2>
+      <p>Flexbox (Flexible Box Layout) is a one-dimensional layout model that makes it easy to align and distribute elements along a row or column. It was designed to solve common layout problems that were awkward with older techniques like floats.</p>
+      <div class="code-block">.container {
+  display: flex;              /* Activates flexbox */
+  flex-direction: row;        /* row (default) or column */
+  justify-content: space-between; /* Horizontal alignment */
+  align-items: center;        /* Vertical alignment */
+  gap: 1rem;                  /* Space between items */
+  flex-wrap: wrap;            /* Allow items to wrap to next line */
+}
+
+/* Control individual items */
+.item { flex: 1; }            /* Each item grows equally */
+.featured { flex: 2; }        /* This item takes twice the space */</div>
+      <p>Key Flexbox properties to remember: <strong>justify-content</strong> controls spacing along the main axis; <strong>align-items</strong> controls alignment on the cross axis; <strong>flex-wrap</strong> allows items to wrap onto multiple lines on smaller screens.</p>
+    </div>
+
+    <!-- CSS Grid -->
+    <div class="content-block">
+      <h2>CSS Grid Layout</h2>
+      <p>CSS Grid is a two-dimensional layout system — it handles both rows and columns simultaneously, making it ideal for building full page layouts.</p>
+      <div class="code-block">.page-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;  /* Sidebar + main content */
+  grid-template-rows: auto 1fr auto; /* Header + content + footer */
+  gap: 1.5rem;
+  min-height: 100vh;
+}
+
+/* Card grid that auto-fills available space */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}</div>
+    </div>
+
+    <!-- Responsive design -->
+    <div class="content-block">
+      <h2>Responsive Design &amp; Media Queries</h2>
+      <p>Responsive design means building pages that look good and function well on all screen sizes — from large desktop monitors to small mobile phones. CSS achieves this through <strong>media queries</strong>, which apply different styles depending on the viewport width.</p>
+      <div class="code-block">/* Mobile-first approach — default styles are for small screens */
+.container { padding: 1rem; }
+.card-grid { grid-template-columns: 1fr; } /* Single column */
+
+/* Tablet and above */
+@media (min-width: 640px) {
+  .card-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Desktop and above */
+@media (min-width: 1024px) {
+  .container { max-width: 1200px; margin: 0 auto; }
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}</div>
+      <p>Mobile-first CSS means writing base styles for small screens and using <code style="font-family:'Space Mono',monospace;color:var(--accent);font-size:0.85em;">min-width</code> media queries to progressively enhance the layout for larger screens. This approach generally results in better performance on mobile devices.</p>
+    </div>
+
+    <!-- CSS Transitions -->
+    <div class="content-block">
+      <h2>Transitions &amp; Animations</h2>
+      <p>CSS transitions smoothly animate a property from one value to another when it changes state (e.g. on hover). CSS animations allow more complex, multi-step animations using keyframes.</p>
+      <div class="code-block">/* Transition — smooth change on hover */
+.btn {
+  background: #2563eb;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px); /* Lift up slightly */
+}
+
+/* Keyframe animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card {
+  animation: fadeIn 0.4s ease forwards;
+}</div>
+    </div>
+
+    <!-- CSS form demo -->
+    <div class="content-block">
+      <h2>CSS Styled Form Demo</h2>
+      <p>This is the <strong>same form from the HTML section</strong>, now styled with CSS. Compare it with the unstyled HTML version to see the transformation CSS makes — custom fonts, colours, spacing, focus states, hover effects, and a polished card layout.</p>
+
+      <div class="demo-box">
+        <label>// Same Form — Now Styled with CSS</label>
+        <div class="css-form-wrap">
+          <h3>Student Registration Form</h3>
+          <p class="subtitle">Fill in your details to register for a course.</p>
+
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Personal Details</legend>
+
+              <label for="c-fname">First Name</label>
+              <input type="text" id="c-fname" name="firstname" placeholder="Enter your first name" />
+
+              <label for="c-lname">Last Name</label>
+              <input type="text" id="c-lname" name="lastname" placeholder="Enter your last name" />
+
+              <label for="c-email">Email Address</label>
+              <input type="email" id="c-email" name="email" placeholder="example@email.com" />
+
+              <label for="c-dob">Date of Birth</label>
+              <input type="date" id="c-dob" name="dob" />
+            </fieldset>
+
+            <fieldset>
+              <legend>Course Details</legend>
+
+              <label for="c-course">Select Your Course</label>
+              <select id="c-course" name="course">
+                <option value="">-- Choose a course --</option>
+                <option value="cet138">CET138 Full Stack Development</option>
+                <option value="cet101">CET101 Web Design</option>
+                <option value="cet202">CET202 Database Systems</option>
+              </select>
+
+              <label>Study Mode</label>
+              <div class="radio-row">
+                <label><input type="radio" name="cmode" value="full" /> Full Time</label>
+                <label><input type="radio" name="cmode" value="part" /> Part Time</label>
+                <label><input type="radio" name="cmode" value="online" /> Online</label>
+              </div>
+
+              <label for="c-msg">Why do you want to study this course?</label>
+              <textarea id="c-msg" name="message" placeholder="Write a short reason..."></textarea>
+
+              <div class="checkbox-row">
+                <input type="checkbox" id="c-agree" name="agree" />
+                <label for="c-agree">I agree to the terms and conditions</label>
+              </div>
+            </fieldset>
+
+            <button type="submit">Submit Registration</button>
+            <p class="form-note">CSS adds: custom fonts, colours, border-radius, focus states, hover effects, and card layout.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>Screenshot Evidence</h2>
+      <div class="screenshot-area">
+      <img src="./cssform.png" alt="css form image">
+        
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>CET138 Full Stack Development &mdash; Prabin Upadhayay &mdash; Reg: 240832809</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

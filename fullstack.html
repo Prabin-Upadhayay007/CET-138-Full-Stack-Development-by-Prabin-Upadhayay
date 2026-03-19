@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Stack Development — ePortfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .topic-img { width:100%; border-radius:8px; border:1px solid var(--border); margin:1rem 0 0.4rem; display:block; object-fit:cover; max-height:300px; }
+    .img-caption { font-size:0.72rem; color:var(--muted); font-family:'Space Mono',monospace; text-align:center; margin-bottom:0.75rem; }
+    .layer-card { border-radius:10px; padding:1.4rem 1.6rem; margin-bottom:1rem; border:1px solid; }
+    .layer-card h3 { font-size:1rem; font-weight:700; margin-bottom:0.5rem; }
+    .layer-card p { font-size:0.9rem; margin-bottom:0.5rem; }
+    .layer-card ul { font-size:0.9rem; padding-left:1.3rem; }
+    .layer-card ul li { margin-bottom:0.3rem; }
+    .layer-frontend { background:#eff4ff; border-color:#c7d7fe; color:#1e3a8a; }
+    .layer-frontend h3 { color:#1e40af; }
+    .layer-backend  { background:#f0fdf4; border-color:#bbf7d0; color:#14532d; }
+    .layer-backend h3  { color:#15803d; }
+    .layer-database { background:#fefce8; border-color:#fde68a; color:#78350f; }
+    .layer-database h3 { color:#b45309; }
+    .flow-arrow { text-align:center; color:var(--muted); font-family:'Space Mono',monospace; font-size:0.78rem; margin:0.2rem 0; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">&lt;Portfolio /&gt;</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fullstack.html">Full Stack</a></li>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <span class="tag">Section 01</span>
+      <h1>What is Full Stack Development?</h1>
+    </div>
+
+    <!-- Hero image -->
+    <!-- <div class="content-block" style="padding:0;overflow:hidden;">
+      <img src="fullstackimage.jpg"
+           alt="Full stack development code on monitor" class="topic-img" style="max-height:280px;border-radius:10px;margin:0;" />
+           
+    </div> -->
+
+        <div class="content-block" style="overflow:hidden;">
+      <center><img src="https://imgs.search.brave.com/PF8ZACHl1GsUPwHrLRV7cKRKixSAJhBLRKT7SGfD02w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzBkL2Mz/Lzg0LzBkYzM4NGU4/N2NiMTZiMmJlYzE0/OGE5MjNmZTAzNmQ1/LmpwZw"
+           alt="full stack development image code" style="max-height:400px;width: auto;border-radius:10px;margin:0;" />
+           <p><i>Image source: <a href="https://www.pinterest.com/ideas/full-stack-development/906624150990/">Pinterest</a></i></p>
+      </center>
+    </div>
+
+    <!-- Definition -->
+    <div class="content-block">
+      <h2>Definition</h2>
+      <p>Full stack development is the practice of building both the <strong>front-end</strong> and the <strong>back-end</strong> of a web application. A full stack developer is someone who can work across every layer of a web app — from designing the user interface a visitor sees in their browser, all the way through to the server logic and database that power it behind the scenes.</p>
+      <p>The term "stack" refers to the collection of technologies used together to build and run a complete web application. Being a full stack developer means being comfortable working with all of them.</p>
+      <p>Companies value full stack developers because they can own a feature end-to-end, communicate fluently with both design and backend teams, and step in wherever help is needed. This makes them some of the most versatile and in-demand professionals in the software industry.</p>
+    </div>
+
+    <!-- Three layers heading -->
+    <div class="content-block">
+      <h2>The Three Layers of a Web Application</h2>
+      <p>Every modern web application is made up of three distinct layers, each with a specific responsibility. Understanding how these layers interact is at the heart of full stack development.</p>
+    </div>
+
+    <!-- LAYER 1: FRONT-END -->
+    <div class="content-block">
+      <h2>Layer 1 — The Front-End (Client Side)</h2>
+      <img src="frontend image.png"
+           alt="Front-end image" class="topic-img" />
+      <p class="img-caption">The front-end is built with HTML, CSS, and JavaScript — the three pillars of the browser.</p>
+
+      <div class="layer-card layer-frontend">
+        <h3>🖥️ What is the Front-End?</h3>
+        <p>The front-end is everything the user sees and interacts with directly in their web browser. It is responsible for the visual layout, design, and interactive behaviour of a website. When you click a button, fill in a form, or see a page animate — that is all front-end work.</p>
+        <p>The front-end communicates with the back-end by sending HTTP requests (e.g. submitting a form) and receiving responses (e.g. a confirmation message or fresh data), which it then displays to the user.</p>
+        <ul>
+          <li><strong>HTML</strong> — defines the structure and content: headings, paragraphs, images, links, and forms.</li>
+          <li><strong>CSS</strong> — controls the visual presentation: colours, fonts, spacing, and responsive layouts.</li>
+          <li><strong>JavaScript</strong> — adds interactivity: responding to clicks, validating forms, and updating the page without a full reload.</li>
+          <li><strong>Frameworks &amp; Libraries</strong> — tools like React, Vue, and Angular help developers build complex front-end applications more efficiently.</li>
+          <li><strong>Bootstrap</strong> — a CSS framework that provides a pre-built grid system and UI components for rapid, responsive design.</li>
+        </ul>
+      </div>
+
+      <p>The front-end runs entirely inside the user's browser. This means the code is downloaded to the user's device and executed there — making performance and user experience a primary concern for front-end developers.</p>
+    </div>
+
+    <!-- LAYER 2: BACK-END -->
+    <div class="content-block">
+      <h2>Layer 2 — The Back-End (Server Side)</h2>
+                    <div class="content-block" style="overflow:hidden;">
+      <center><img src="https://imgs.search.brave.com/SXF64FlMERFAKiICAJiOPacXArCU2Tqpa3BXaUNwhec/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE3NjMzNzI2/Mjk0NTEvZDY4MmU1/ZjctMzFkMS00OGFm/LTg5NTctOGU5MTZi/N2I1MDZhLmpwZWc"
+           alt="Back-end image" style="max-height:400px;width: auto;border-radius:10px;margin:0;" />
+           <p><i>Image source: <a href="https://www.freecodecamp.org/news/intro-to-backend-web-development-nodejs-express-mongodb/">FreeCodeCamp</a></i></p>
+      </center>
+    </div>
+
+      <p class="img-caption">The back-end runs on servers — powerful computers that process requests and manage data.</p>
+
+      <div class="layer-card layer-backend">
+        <h3>⚙️ What is the Back-End?</h3>
+        <p>The back-end is the hidden engine of a web application. It runs on a server and handles all the logic, authentication, data processing, and business rules that make an application work. Users never see back-end code directly — they only see the results it produces.</p>
+        <p>When a user logs in to a website, the front-end sends their username and password to the back-end. The back-end checks the credentials against the database, decides whether to grant access, and sends a response back — all invisibly and in milliseconds.</p>
+        <ul>
+          <li><strong>Node.js</strong> — allows JavaScript to run on the server, making it possible to use one language across the entire stack.</li>
+          <li><strong>Express.js</strong> — a lightweight Node.js framework for building web servers and REST APIs quickly.</li>
+          <li><strong>Python / Django / Flask</strong> — popular choices for back-end development, especially in data-heavy applications.</li>
+          <li><strong>PHP / Laravel</strong> — widely used in content management systems and e-commerce platforms.</li>
+          <li><strong>REST APIs</strong> — the back-end often exposes a REST API: a set of URLs the front-end can call to create, read, update, or delete data (CRUD operations).</li>
+          <li><strong>Authentication &amp; Security</strong> — the back-end handles password hashing, session tokens, and protecting routes from unauthorised access.</li>
+        </ul>
+      </div>
+
+      <p>The back-end is where sensitive operations must happen. You never put secret keys, database passwords, or business-critical logic in front-end code — because front-end code is visible to anyone who opens their browser's developer tools.</p>
+    </div>
+
+    <!-- LAYER 3: DATABASE -->
+    <div class="content-block">
+      <h2>Layer 3 — The Database (Data Layer)</h2>
+                               <div class="content-block" style="overflow:hidden;">
+      <center><img src="https://imgs.search.brave.com/nLO5n0w_w2ILCqUq5o8GvykyRrutArsT-e6-U6YXF1k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pdC1z/LmNvbS93cC1jb250/ZW50L3dlYnAtZXhw/cmVzcy93ZWJwLWlt/YWdlcy91cGxvYWRz/LzIwMjAvMTIvYmxv/Zy1pbWFnZS01LnBu/Zy53ZWJw"
+           alt="Database image" style="max-height:400px;width: auto;border-radius:10px;margin:0;" />
+           <p><i>Image source: <a href="https://it-s.com/what-is-database-development/">IT-S</a></i></p>
+      </center>
+    </div>
+      <p class="img-caption">Databases store and organise all the persistent data an application relies on.</p>
+
+      <div class="layer-card layer-database">
+        <h3>🗄️ What is the Database Layer?</h3>
+        <p>The database is where all persistent data lives — user accounts, posts, orders, settings, and anything else that needs to be stored and retrieved. Without a database, every time a user refreshed the page, all their data would be lost.</p>
+        <p>The back-end communicates with the database using query languages or object-relational mappers (ORMs). The database never communicates directly with the front-end — it is always accessed through the back-end, which acts as a gatekeeper.</p>
+        <ul>
+          <li><strong>SQL Databases</strong> (MySQL, PostgreSQL, SQLite) — store data in structured tables with rows and columns, like a spreadsheet. Relationships between tables are defined using foreign keys. Best for structured, consistent data.</li>
+          <li><strong>NoSQL Databases</strong> (MongoDB, Firebase, CouchDB) — store data as flexible documents (similar to JSON objects). Best for unstructured or rapidly changing data structures.</li>
+          <li><strong>CRUD Operations</strong> — all database interactions boil down to four actions: <em>Create</em> (INSERT), <em>Read</em> (SELECT), <em>Update</em> (UPDATE), <em>Delete</em> (DELETE).</li>
+          <li><strong>ORMs</strong> — tools like Sequelize (Node.js) or SQLAlchemy (Python) let developers write database queries in their programming language rather than raw SQL.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- How the layers connect -->
+    <div class="content-block">
+      <h2>How the Three Layers Work Together</h2>
+      <p>The three layers work as a pipeline. Here is a step-by-step example of what happens when a user submits a contact form:</p>
+      <ol style="font-size:0.92rem; color:#374151; padding-left:1.4rem; margin-bottom:1rem;">
+        <li style="margin-bottom:0.5rem;"><strong>Front-End:</strong> The user fills in the form and clicks Submit. JavaScript validates the input fields.</li>
+        <li style="margin-bottom:0.5rem;"><strong>HTTP Request:</strong> The browser sends a POST request with the form data to the server.</li>
+        <li style="margin-bottom:0.5rem;"><strong>Back-End:</strong> The server receives the request, checks the data is safe, and prepares a database query.</li>
+        <li style="margin-bottom:0.5rem;"><strong>Database:</strong> The query is executed and the message is saved. The database confirms success.</li>
+        <li style="margin-bottom:0.5rem;"><strong>HTTP Response:</strong> The server sends a success response back to the browser.</li>
+        <li style="margin-bottom:0.5rem;"><strong>Front-End:</strong> JavaScript receives the response and shows the user a "Message sent!" confirmation.</li>
+      </ol>
+
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div class="layer-card layer-frontend" style="margin-bottom:0;">
+          <h3>Front-End — Browser</h3>
+          <p style="margin:0;">HTML &bull; CSS &bull; JavaScript &bull; Bootstrap</p>
+        </div>
+        <div class="flow-arrow">⬆ HTTP Request / Response ⬇</div>
+        <div class="layer-card layer-backend" style="margin-bottom:0;">
+          <h3>Back-End — Server</h3>
+          <p style="margin:0;">Node.js &bull; Express &bull; Python &bull; PHP</p>
+        </div>
+        <div class="flow-arrow">⬆ Database Query / Result ⬇</div>
+        <div class="layer-card layer-database" style="margin-bottom:0;">
+          <h3>Database — Data Store</h3>
+          <p style="margin:0;">MySQL &bull; PostgreSQL &bull; MongoDB</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why full stack -->
+    <div class="content-block">
+      <h2>Why Learn Full Stack Development?</h2>
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80"
+           alt="Developer working across multiple screens" class="topic-img" />
+      <p class="img-caption">Full stack developers are comfortable working across every layer of a modern web application.</p>
+      <ul style="font-size:0.93rem; color:#374151; padding-left:1.4rem;">
+        <li style="margin-bottom:0.4rem;"><strong>Build complete products independently</strong> — you can take an idea from concept to deployed application without needing other developers.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Understand the whole picture</strong> — knowing how all layers connect makes you a much better developer, even if you specialise later.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Better communication</strong> — you can speak the language of both front-end and back-end teams, making collaboration smoother.</li>
+        <li style="margin-bottom:0.4rem;"><strong>High demand</strong> — full stack developers are among the most sought-after professionals in the tech industry.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Freelance and startup opportunities</strong> — small teams and clients need people who can do it all.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>CET138 Full Stack Development &mdash; Prabin Upadhayay &mdash; Reg: 240832809</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
